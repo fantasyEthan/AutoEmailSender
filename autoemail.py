@@ -17,8 +17,8 @@ name_path = os.path.join(dir_path, '18级学生信息_邮箱.xlsx')
 df = getEmail(file_path, name_path)
 
 mail_host = "smtp.exmail.qq.com"  # 使用邮箱的发送邮件服务器
-mail_sender = "s_lyu@smail.nju.edu.cn"  # 发送人邮箱
-mail_license = "wwhhcc110OK"  # 邮箱授权码
+mail_sender = "***********"  # 发送人邮箱
+mail_license = "*********"  # 邮箱授权码
 
 
 def sendMail(mm, mail_host, mail_sender, mail_receiver, mail_license):
@@ -71,10 +71,8 @@ def send_notice(df, mail_host, mail_sender, mail_receiver, mail_license):
 
 
 if __name__ == '__main__':
-    mail_receiver_notice = ['peiyu@nju.edu.cn', '359885114@qq.com', '2218315386@qq.com', '181180049@smail.nju.edu.cn', '2733147505@qq.com',
-                            '2585608619@qq.com', '1084329358@qq.com', '181180164@smail.nju.edu.cn', '552418625@qq.com',
-                            '1079450738@qq.com', '2543816228@qq.com', '15852756236@163.com', '2584922112@qq.com', '1679385376@qq.com']
-    mail_receiver_notice_test = ['359885114@qq.com', 's_lyu@smail.nju.edu.cn']
+    mail_receiver_notice = []
+    mail_receiver_notice_test = []
     send_notice(df, mail_host, mail_sender,
                  mail_receiver_notice, mail_license)
     send_warning(df, mail_host, mail_sender, mail_license)
